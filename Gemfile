@@ -20,7 +20,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 group :development do
-  gem 'spring'
+  #gem 'spring'
   gem "better_errors"
   gem 'annotate', ">=2.6.0"
   gem 'bullet'
