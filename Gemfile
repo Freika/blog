@@ -4,7 +4,7 @@ gem 'rails', '4.1.0'
 gem 'pg'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'friendly_id'
-gem 'devise'
+gem 'sorcery'
 
 gem 'simple_form'
 gem 'jquery-rails'
@@ -17,6 +17,7 @@ gem 'therubyracer'
 gem 'jbuilder', '~> 2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'carrierwave'
+gem 'quiet_assets'
 gem 'mini_magick'
 
 group :development do
@@ -25,7 +26,6 @@ group :development do
   gem 'annotate', ">=2.6.0"
   gem 'bullet'
   gem 'hirb'
-  gem 'quiet_assets'
   gem 'rack-mini-profiler'
   gem 'rails-footnotes', '>= 4.0.0', '<5'
   gem 'rspec-rails', '~> 3.0.0'

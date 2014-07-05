@@ -7,8 +7,57 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render partial: 'layouts/header' %>
 <div class="container">
+<div class="row">
+ <div class="col-lg-8">
+    
+    <!-- second blog entry -->
+     <h1><a href="#">Another Blog Post</a>
+     </h1>
+     <p class="lead">by <a href="index.php">Start Bootstrap</a>
+     </p>
+     <hr>
+     <p>
+         <span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
+     <hr>
+     <img src="http://placehold.it/900x300" class="img-responsive">
+     <hr>
+     <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science...</p>
+     <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+    <hr>
+    <!-- third blog entry -->
+     <h1><a href="#">Third Blog Post Entry</a>
+     </h1>
+     <p class="lead">by <a href="index.php">Start Bootstrap</a>
+     </p>
+     <hr>
+     <p>
+         <span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
+     <hr>
+     <img src="http://placehold.it/900x300" class="img-responsive">
+     <hr>
+     <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science...</p>
+     <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+    <hr>
+    <!-- pager -->
+     <ul class="pager">
+         <li class="previous"><a href="#">&larr; Older</a>
+         </li>
+         <li class="next"><a href="#">Newer &rarr;</a>
+         </li>
+     </ul>
+</div>
+
+  <%= render partial: 'layouts/sidebar' %>
+            
+        </div>
+
+
+
+    </div>
   <%= yield %>
 </div>
+<%= render partial: 'layouts/footer' %>
 </body>
 </html>

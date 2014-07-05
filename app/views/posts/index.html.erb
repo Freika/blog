@@ -27,3 +27,18 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+
+<% @posts.each do |post| %>
+<!-- blog entry -->
+     <h1><%= link_to post.title, post %>
+     </h1>
+     <hr>
+     <p>
+         <span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at %></p>
+     <hr>
+     <img src="http://placehold.it/900x300" class="img-responsive">
+     <hr>
+     <%= post.content %>
+     <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+    <hr>
+  <% end %>

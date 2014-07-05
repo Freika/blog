@@ -1,7 +1,8 @@
-<%= simple_form_for @post, html: { class: 'form-horizontal', role: 'form' } do |f| %>
-  <%= f.input :title %>
-  <%= f.input :url %>
-  <%= f.input :content %>
-  
-  <%= f.button :submit, value: 'Отправить' %>
+<%= form_for @post do |f| %>
+<%= f.text_field :title %>
+<%= f.text_field :url %>
+<%= f.text_area :content %>
+
+<%= f.button :submit  %>
+
 <% end %>
