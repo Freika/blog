@@ -9,7 +9,7 @@
   <hr>
   <img src="http://placehold.it/900x300" class="img-responsive">
   <hr>
-  <%= @post.content %>
+  <%= @post.content.html_safe %>
 
 <hr>
 <%= link_to 'Edit', edit_post_path(@post) %> |

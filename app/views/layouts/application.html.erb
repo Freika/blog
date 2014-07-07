@@ -9,26 +9,15 @@
 <body>
 <%= render partial: 'layouts/header' %>
 <div class="container">
-<div class="row">
- <div class="col-lg-8">
-   <%= yield %>
-
-    <!-- pager -->
-     <ul class="pager">
-         <li class="previous"><a href="#">&larr; Older</a>
-         </li>
-         <li class="next"><a href="#">Newer &rarr;</a>
-         </li>
-     </ul>
-</div>
-<div class="col-lg-4">
-  <%= render partial: 'layouts/sidebar' %>
-</div>
-        </div>
-
-
-
+  <div class="row">
+   <div class="col-lg-8">
+     <%= yield %>
+  </div>
+    <div class="col-lg-4">
+      <%= render partial: 'layouts/sidebar' %>
     </div>
+  </div>
+</div>
 </div>
 <%= render partial: 'layouts/footer' %>
 </body>
