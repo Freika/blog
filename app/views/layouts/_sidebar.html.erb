@@ -1,15 +1,12 @@
   <div id="nav">
     <% if current_user %>
-      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-      <%= link_to "Logout", :logout, method: :post %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
+      <%= link_to "Редактировать профиль", edit_user_path(current_user.id) %>
+      <%= link_to "Выйти", :logout, method: :post %>
     <% end %>
       <div>
-    <p id="notice"><%= flash[:notice] %></p>
-    <p id="alert"><%= flash[:alert] %></p>
-  </div>
+        <p id="notice"><%= flash[:notice] %></p>
+        <p id="alert"><%= flash[:alert] %></p>
+      </div>
   </div>
                 <div class="well">
                     <h4>Blog Search</h4>

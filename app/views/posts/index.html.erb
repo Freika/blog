@@ -1,4 +1,6 @@
-<%= link_to 'New Post', new_post_path %>
+<% if current_user %>
+    <%= link_to 'Новая запись', new_post_path %>
+<% end %>  
 
 <% @posts.each do |post| %>
 <!-- blog entry -->
@@ -9,7 +11,9 @@
          <span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at %></p>
      <hr>
      <%= post.content %>
-     <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+     <% if current_user %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+     <% end %>  
      <p><a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a></p>
     <hr>
   <% end %>
