@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :posts
+  resources :posts, path: ""
 
   root 'posts#index'
 
