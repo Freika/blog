@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0'
 gem 'pg'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'friendly_id'
 gem 'sorcery'
 
 gem 'simple_form'
