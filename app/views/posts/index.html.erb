@@ -8,9 +8,9 @@
      </h1>
      <hr>
      <p>
-         <span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at %></p>
+         <span class="glyphicon glyphicon-time"></span> Дата публикации: <%= post.created_at %></p>
      <hr>
-     <%= post.content %>
+     <%= post.content.html_safe %>
      <% if current_user %>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
      <% end %>  
