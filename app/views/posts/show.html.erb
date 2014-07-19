@@ -13,3 +13,4 @@
 <% if current_user %>
   <%= link_to 'Edit', edit_post_path(@post) %> |
 <% end %>  
+<% provide(:title, @post.title) %>
