@@ -7,7 +7,9 @@
   
   <span class="glyphicon glyphicon-time"></span> Posted on <%= @post.created_at %></p>
   <hr>
-  <%= @post.content.html_safe %>
+  <div class="post-content">
+    <%= @post.content.html_safe %>
+  </div>
 
 <hr>
 <% if current_user %>

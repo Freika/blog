@@ -10,11 +10,12 @@
      <p>
          <span class="glyphicon glyphicon-time"></span> Дата публикации: <%= post.created_at %></p>
      <hr>
-     <%= truncate(post.content.html_safe, separator: ' ', omission: '...', length: 500, escape: false) { link_to 'Читать далее', post} %>
+     <div class="post-content">
+        <%= truncate(post.content.html_safe, separator: ' ', omission: '...', length: 500, escape: false) { link_to 'Читать далее', post} %> 
+     </div>
      <% if current_user %>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
      <% end %>  
-     <p><a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a></p>
     <hr>
   <% end %>
 

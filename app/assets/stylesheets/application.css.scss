@@ -11,6 +11,14 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
  *= require bootstrap
+ *= require_self
  */
+
+ body {
+  font-family: 'PT Serif', serif;
+ }
+
+.post-content {
+  font-size: 18px;
+}

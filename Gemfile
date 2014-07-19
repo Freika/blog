@@ -19,6 +19,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'carrierwave'
 gem 'quiet_assets'
 gem 'mini_magick'
+gem 'google-webfonts'
 
 group :development do
   #gem 'spring'
