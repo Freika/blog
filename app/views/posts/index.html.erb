@@ -4,18 +4,19 @@
 
 <% @posts.each do |post| %>
 <!-- blog entry -->
-     <h1><%= link_to post.title, post %>
-     </h1>
+     <h1><%= link_to post.title, post %></h1>
      <hr>
      <p>
-         <span class="glyphicon glyphicon-time"></span> Дата публикации: <%= post.created_at %></p>
+         <span class="glyphicon glyphicon-time"></span>Дата публикации: <%= post.created_at %>
+         <% if current_user %>
+            <%= link_to 'Редактировать пост', edit_post_path(post) %>
+        <% end %>
+     </p>
      <hr>
      <div class="post-content">
         <%= truncate(post.content.html_safe, separator: ' ', omission: '...', length: 500, escape: false) { link_to 'Читать далее', post} %> 
      </div>
-     <% if current_user %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-     <% end %>  
+     
     <hr>
   <% end %>
 
