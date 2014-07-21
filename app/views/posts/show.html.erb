@@ -1,23 +1,32 @@
 <!-- the actual blog post: title/author/date/content -->
 <p id="notice"><%= notice %></p>
+<article class="row">
+  <aside class="col-lg-2 post-meta">
+    <span class="publication-date"><%= @post.created_at.strftime('%d %b %Y') %></span>
+  </aside>
+
+
+<div class="col-lg-10">
+<!-- blog entry -->
 <% if current_user %>
   <%= link_to 'Править', edit_post_path(@post) %> |
   <%= link_to 'Удалить', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
-
-<h1><%= @post.title %></h1>
-<hr>
-<p>
-  
-  <span class="glyphicon glyphicon-time"></span> Posted on <%= @post.created_at %></p>
-  <hr>
-  <div class="post-content">
-    <%= @post.content.html_safe %>
-  </div>
-
-<hr>
-
+     <h3><%= @post.title %></h3>
+         <% if current_user %>
+            <p>
+            <%= link_to 'Редактировать пост', edit_post_path(@post) %>
+            </p>
+            <hr>
+        <% end %>
+     <div class="post-content">
+        <%= @post.content.html_safe %> 
+     </div>
+</div>
 <% provide(:title, @post.title) %>
+</article>
+<hr>
+
 
 <div id="disqus_thread"></div>
     <script type="text/javascript">

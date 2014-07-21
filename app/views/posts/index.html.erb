@@ -1,30 +1,26 @@
+<% @posts.each do |post| %>
+<article class="row">
+    
+<aside class="col-lg-2 post-meta">
+    <span class="publication-date"><%= post.created_at.strftime('%d %b %Y') %></span>
+</aside>
+<div class="col-lg-10">
+
 <% if current_user %>
     <%= link_to 'Новая запись', new_post_path %>
 <% end %>  
-
-<% @posts.each do |post| %>
 <!-- blog entry -->
-     <h1><%= link_to post.title, post %></h1>
-     <hr>
-     <p>
-         <span class="glyphicon glyphicon-time"></span>Дата публикации: <%= post.created_at %>
+     <h3><%= link_to post.title, post %></h3>
          <% if current_user %>
+            <p>
             <%= link_to 'Редактировать пост', edit_post_path(post) %>
+            </p>
+            <hr>
         <% end %>
-     </p>
-     <hr>
      <div class="post-content">
         <%= truncate(post.content.html_safe, separator: ' ', omission: '...', length: 500, escape: false) { link_to 'Читать далее', post} %> 
      </div>
-     
-    <hr>
-  <% end %>
+</div>
 
-  <!-- pager -->
-<ul class="pager">
-    <li class="previous"><a href="#">&larr; Older</a>
-    </li>
-    <li class="next"><a href="#">Newer &rarr;</a>
-    </li>
-</ul>
-<% provide(:title, "Главная") %>
+</article>
+  <% end %>

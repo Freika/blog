@@ -21,4 +21,27 @@
 
 .post-content {
   font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #333;
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.publication-date {
+  font-size: 22px;
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  text-align: right;
+  margin-top: 19px;
+}
+
+article.row {
+  margin-bottom: 30px;
 }
