@@ -6,9 +6,6 @@
 </aside>
 <div class="col-lg-10">
 
-<% if current_user %>
-    <%= link_to 'Новая запись', new_post_path %>
-<% end %>  
 <!-- blog entry -->
      <h3><%= link_to post.title, post %></h3>
          <% if current_user %>
