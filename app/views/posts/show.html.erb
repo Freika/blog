@@ -8,23 +8,17 @@
 
 <div class="col-lg-10">
 <!-- blog entry -->
-<% if current_user %>
-  <%= link_to 'Править', edit_post_path(@post) %> |
-  <%= link_to 'Удалить', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
      <h3><%= @post.title %></h3>
-         <% if current_user %>
-            <p>
-            <%= link_to 'Редактировать пост', edit_post_path(@post) %>
-            </p>
-            <hr>
-        <% end %>
      <div class="post-content">
         <%= @post.content.html_safe %> 
      </div>
 </div>
 <% provide(:title, @post.title) %>
 </article>
+<% if current_user %>
+  <%= link_to 'Редактировать', edit_post_path(@post) %> |
+  <%= link_to 'Удалить', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 <hr>
 
 
