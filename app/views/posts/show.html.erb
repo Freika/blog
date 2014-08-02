@@ -10,7 +10,7 @@
 <!-- blog entry -->
      <h3><%= @post.title %></h3>
      <div class="post-content">
-        <%= @post.content.html_safe %> 
+        <%= markdown @post.content %> 
      </div>
 </div>
 <% provide(:title, @post.title) %>

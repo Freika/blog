@@ -15,7 +15,8 @@
             <hr>
         <% end %>
      <div class="post-content">
-        <%= truncate(post.content.html_safe, separator: ' ', omission: '...', length: 500, escape: false) { link_to 'Читать далее', post} %> 
+        <%=  %>
+        <%= markdown post.content %> 
      </div>
 </div>
 
