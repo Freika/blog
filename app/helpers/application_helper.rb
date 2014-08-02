@@ -9,6 +9,6 @@ module ApplicationHelper
   end
 
   def markdown(source)
-    Kramdown::Document.new(source).to_html.html_safe
+    Kramdown::Document.new(source, coderay_line_numbers: nil).to_html.html_safe
   end
 end
