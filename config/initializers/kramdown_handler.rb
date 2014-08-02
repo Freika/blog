@@ -1,3 +1,5 @@
+require 'kramdown'
+
 module MarkdownHandler
   def self.erb
     @erb ||= ActionView::Template.registered_template_handler(:erb)
