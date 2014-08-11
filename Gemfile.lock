@@ -78,6 +78,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     friendly_id (5.0.4)
       activerecord (>= 4.0.0)
+    high_voltage (2.2.0)
     highline (1.6.21)
     hike (1.2.3)
     hirb (0.7.2)
@@ -227,6 +228,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   faker
   friendly_id
+  high_voltage
   hirb
   jbuilder (~> 2.0)
   jquery-rails

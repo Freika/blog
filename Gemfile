@@ -20,6 +20,7 @@ gem 'carrierwave'
 gem 'quiet_assets'
 gem 'mini_magick'
 gem 'kramdown'
+gem 'high_voltage'
 
 group :development do
   #gem 'spring'
