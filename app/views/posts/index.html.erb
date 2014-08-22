@@ -1,24 +1,22 @@
 <% @posts.each do |post| %>
 <article class="row">
-    
 <aside class="col-lg-2 post-meta">
     <span class="publication-date"><%= post.created_at.strftime('%d %b %Y') %></span>
 </aside>
 <div class="col-lg-10">
-
 <!-- blog entry -->
-     <h3><%= link_to post.title, post %></h3>
-         <% if current_user %>
-            <p>
-            <%= link_to 'Редактировать пост', edit_post_path(post) %>
-            </p>
-            <hr>
-        <% end %>
-     <div class="post-content">
-        <%=  %>
-        <%= markdown post.content %> 
-     </div>
-</div>
-
-</article>
+  <h3><%= link_to post.title, post %></h3>
+  <% if current_user %>
+    <p>
+      <%= link_to 'Редактировать пост', edit_post_path(post) %>
+    </p>
+    <hr>
   <% end %>
+  <div class="post-content">
+    <%= markdown post.content %>
+  </div>
+</div>
+</article>
+<% end %>
+
+<%= paginate @users %>

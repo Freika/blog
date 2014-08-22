@@ -15,6 +15,7 @@ class Post < ActiveRecord::Base
   validates :url, uniqueness: true
   extend FriendlyId
   friendly_id :url
+  paginates_per 5
   default_scope -> { order('created_at DESC') }
 
 end
