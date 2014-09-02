@@ -19,4 +19,4 @@
 </article>
 <% end %>
 
-<%#= paginate @posts %>
+<%= will_paginate @posts, previous_label: "← Туда", next_label: "Сюда →" %>
