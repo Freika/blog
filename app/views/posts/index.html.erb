@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
 <article class="row">
 <aside class="col-lg-2 post-meta">
-    <span class="publication-date"><%= post.created_at.strftime('%d %b %Y') %></span>
+    <span class="publication-date"><%= Russian::strftime(post.created_at, "%e %B %Y")  %></span>
 </aside>
 <div class="col-lg-10">
 <!-- blog entry -->

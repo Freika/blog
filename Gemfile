@@ -20,6 +20,8 @@ gem 'quiet_assets'
 gem 'mini_magick'
 gem 'kramdown'
 gem 'high_voltage'
+gem 'russian', '~> 0.6.0'
+
 
 group :development do
   #gem 'spring'
