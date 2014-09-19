@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :posts, path: ""
 
+  # mount Upmin::Engine => '/dashboard/admin'
+
   root 'posts#index'
 
   get 'bonus/digitalocean' => redirect('https://www.digitalocean.com/?refcode=5dcbfa133a56')
