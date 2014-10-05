@@ -21,7 +21,8 @@ gem 'mini_magick'
 gem 'kramdown'
 gem 'high_voltage'
 gem 'russian', '~> 0.6.0'
-gem 'upmin-admin'
+gem 'newrelic_rpm'
+
 
 
 group :development do
