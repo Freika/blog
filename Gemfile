@@ -22,8 +22,7 @@ gem 'kramdown'
 gem 'high_voltage'
 gem 'russian', '~> 0.6.0'
 gem 'newrelic_rpm'
-
-
+gem 'acts-as-taggable-on', '~> 3.4'
 
 group :development do
   #gem 'spring'

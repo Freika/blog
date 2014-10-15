@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   validates :url, uniqueness: true
   extend FriendlyId
   friendly_id :url
+  acts_as_taggable
 
   default_scope -> { order('created_at DESC') }
 
