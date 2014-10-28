@@ -4,10 +4,9 @@
     <div class="row">
         <div class="col-lg-12">
             <p>Frey, 2014-<%= Time.now.year %> </p>
-            <% if current_user %>
-              <%= link_to "Редактировать профиль", edit_user_path(current_user.id) %>
-              <%= link_to "Выйти", :logout, method: :post %>
-            <% end %>
+            <%# if current_user %>
+            LOGOUT
+            <%# end %>
         </div>
     </div>
 </footer>

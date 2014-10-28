@@ -14,9 +14,9 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav pull-right">
                 <li><%= link_to 'Обо мне', page_path('about') %></li>
-                <% if current_user %>
+                <% #if current_user %>
                     <li><%= link_to 'Новая запись', new_post_path %></li>
-                <% end %>
+                <%# end %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

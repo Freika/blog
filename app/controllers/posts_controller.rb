@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  before_action :require_login, only: [:new, :create, :edit]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
