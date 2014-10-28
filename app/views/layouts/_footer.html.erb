@@ -4,9 +4,9 @@
     <div class="row">
         <div class="col-lg-12">
             <p>Frey, 2014-<%= Time.now.year %> </p>
-            <%# if current_user %>
-            LOGOUT
-            <%# end %>
+            <% if current_user %>
+              <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+            <% end %>
         </div>
     </div>
 </footer>

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
 
   def index
     @posts = Post.paginate(page: params[:page], per_page: 5)
@@ -44,12 +45,12 @@ class PostsController < ApplicationController
     end
   end
 
-  private
-    def set_post
-      @post = Post.friendly.find(params[:id])
-    end
+private
+  def set_post
+    @post = Post.friendly.find(params[:id])
+  end
 
-    def post_params
-      params.require(:post).permit(:title, :url, :content, :tag_list)
-    end
+  def post_params
+    params.require(:post).permit(:title, :url, :content, :tag_list)
+  end
 end

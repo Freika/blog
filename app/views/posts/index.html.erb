@@ -6,12 +6,12 @@
 <div class="col-lg-10">
 <!-- blog entry -->
   <h2><%= link_to post.title, post %></h2>
-  <%# if current_user %>
+  <% if current_user %>
     <p>
       <%= link_to 'Редактировать пост', edit_post_path(post) %>
     </p>
     <hr>
-  <%# end %>
+  <% end %>
   <div class="post-content">
     <%= markdown post.content %>
   </div>

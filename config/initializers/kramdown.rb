@@ -2,7 +2,7 @@ module Kramdown
   module Converter
     class Html
       include ActionView::Helpers::AssetTagHelper
- 
+
       def convert_img(el, indent)
         attrs = el.attr.dup
         link = attrs.delete 'src'
