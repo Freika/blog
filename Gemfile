@@ -40,7 +40,7 @@ end
 
 group :production do
   # gem 'capistrano', github: 'capistrano/capistrano', ref: '96a16'
-  # gem 'unicorn'
+  gem 'unicorn'
   gem 'rails_12factor'
 end
 
