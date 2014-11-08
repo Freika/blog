@@ -12,9 +12,11 @@
 <div class="col-lg-10">
 <!-- blog entry -->
      <h2><%= @post.title %></h2>
-     <div class="tags">
-       Темы: <%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
-     </div>
+     <% if @post.tag_list.present? %>
+       <div class="tags">
+         Темы: <%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
+       </div>
+     <% end %>
      <div class="post-content">
         <%= markdown @post.content %>
      </div>
