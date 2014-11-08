@@ -23,6 +23,7 @@ gem 'high_voltage'
 gem 'russian', '~> 0.6.0'
 gem 'newrelic_rpm'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'slim-rails'
 
 group :development do
   #gem 'spring'

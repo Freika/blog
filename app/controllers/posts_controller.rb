@@ -3,7 +3,11 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
 
   def index
-    @posts = Post.paginate(page: params[:page], per_page: 5)
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 5)
+    else
+      @posts = Post.paginate(page: params[:page], per_page: 5)
+    end
   end
 
   def show
