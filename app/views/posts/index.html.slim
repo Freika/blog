@@ -11,6 +11,6 @@
     - if current_user
         p= link_to 'Редактировать пост', edit_post_path(post)
         hr
-    .post-content= markdown post.content
+    .post-content= markdown truncate(post.content, length: 500, separator: '\n')
 
 = will_paginate @posts, previous_label: "← Туда", next_label: "Сюда →"
