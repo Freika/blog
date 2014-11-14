@@ -37,6 +37,9 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    bh (1.2.0)
+      actionpack
+      activesupport
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.1.1.1)
@@ -211,6 +214,7 @@ DEPENDENCIES
   acts-as-taggable-on (~> 3.4)
   annotate (>= 2.6.0)
   better_errors
+  bh (~> 1.2)
   binding_of_caller
   bootstrap-sass (~> 3.1.1)
   bullet

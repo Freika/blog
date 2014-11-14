@@ -24,6 +24,7 @@ gem 'russian', '~> 0.6.0'
 gem 'newrelic_rpm'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'slim-rails'
+gem 'bh', '~> 1.2'
 
 group :development do
   #gem 'spring'
