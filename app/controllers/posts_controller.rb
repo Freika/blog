@@ -4,9 +4,9 @@ class PostsController < ApplicationController
 
   def index
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 5)
+      @posts = Post.published.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 5)
     else
-      @posts = Post.paginate(page: params[:page], per_page: 5)
+      @posts = Post.published.paginate(page: params[:page], per_page: 5)
     end
   end
 
@@ -55,6 +55,6 @@ private
   end
 
   def post_params
-    params.require(:post).permit(:title, :url, :content, :tag_list)
+    params.require(:post).permit(:title, :url, :content, :tag_list, :published)
   end
 end

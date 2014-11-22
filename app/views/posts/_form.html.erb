@@ -12,6 +12,9 @@
 <%= f.label :tag_list, "Список тегов" %>
 <%= f.text_field :tag_list, class: 'form-control' %>
 <br>
+<%= f.label :published, "Опубликовано?" %>
+<%= f.check_box :published, class: 'form-control' %>
+<br>
 <%= f.submit "Опубликовать", class: "btn btn-success" %>
 
 <% end %>
