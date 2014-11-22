@@ -6,7 +6,7 @@
     h2= link_to post.title, post
     - if post.tag_list.present?
       .tags
-        | Темы:
+        ' Темы:
         = raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ')
     - if current_user
         p= link_to 'Редактировать пост', edit_post_path(post)
