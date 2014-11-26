@@ -27,16 +27,7 @@ gem 'slim-rails'
 gem 'bh', '~> 1.2'
 
 group :development do
-  #gem 'spring'
-  gem "better_errors"
   gem 'annotate', ">=2.6.0"
-  gem 'bullet'
-  gem 'hirb'
-  gem 'rack-mini-profiler'
-  gem 'rails-footnotes', '>= 4.0.0', '<5'
-  gem 'rspec-rails', '~> 3.0.0'
-  gem 'faker'
-  gem 'binding_of_caller'
 end
 
 
