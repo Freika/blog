@@ -1,5 +1,13 @@
 h1
- | Редактирование записи
+ ' Редактирование записи
  = @post.title
 = render 'form'
+
+h2 = @post.title
+- if @post.tag_list.present?
+  .tags
+    ' Темы:
+    = raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ')
+  .post-content = markdown @post.content
+
 - provide(:title, "Редактируем #{@post.title}")
