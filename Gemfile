@@ -25,6 +25,7 @@ gem 'newrelic_rpm'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'slim-rails'
 gem 'bh', '~> 1.2'
+gem 'dynamic_sitemaps'
 
 group :development do
   gem 'annotate', ">=2.6.0"
