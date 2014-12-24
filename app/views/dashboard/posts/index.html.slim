@@ -1,0 +1,4 @@
+h2 Список постов
+
+- @posts.each do |post|
+  h4= link_to "#{post.title}, #{post.published ? 'Опубликован' : 'Черновик'}", edit_post_path(post)

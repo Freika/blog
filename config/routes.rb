@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   get 'feeds/rss', controller: 'feeds', action: 'rss', format: 'rss', as: :feed
   get 'feeds/sitemap.xml' => 'feeds#sitemap'
   get 'feeds/robots.txt' => 'feeds#robots', format: 'text'
+
+  namespace :dashboard do
+    resources :posts, path: '/posts'
+  end
 end
