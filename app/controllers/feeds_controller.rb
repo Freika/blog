@@ -12,9 +12,5 @@ class FeedsController < ApplicationController
     end
   end
 
-  def robots
-    @posts = Post.where(published: false)
-    render 'feeds/robots.txt.erb'
-  end
 
 end

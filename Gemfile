@@ -29,11 +29,11 @@ gem 'dynamic_sitemaps'
 
 group :development do
   gem 'annotate', ">=2.6.0"
+  gem "thin"
 end
 
 
 group :production do
-  # gem 'capistrano', github: 'capistrano/capistrano', ref: '96a16'
   gem 'unicorn'
   gem 'rails_12factor'
 end

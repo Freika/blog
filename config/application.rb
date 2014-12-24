@@ -20,7 +20,10 @@ module Blog
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.i18n.default_locale = :ru
+<<<<<<< HEAD
     config.force_ssl = true if Rails.env.production?
+=======
+>>>>>>> 01a07fcb4f44adc741016ff271d4ec800b96ead1
 
   end
 end

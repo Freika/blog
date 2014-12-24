@@ -8,9 +8,12 @@ Rails.application.routes.draw do
   get 'bonus/digitalocean' => redirect('https://www.digitalocean.com/?refcode=5dcbfa133a56')
   get 'feeds/rss', controller: 'feeds', action: 'rss', format: 'rss', as: :feed
   get 'feeds/sitemap.xml' => 'feeds#sitemap'
+<<<<<<< HEAD
   get 'feeds/robots.txt' => 'feeds#robots', format: 'text'
 
   namespace :dashboard do
     resources :posts, path: '/posts'
   end
+=======
+>>>>>>> 01a07fcb4f44adc741016ff271d4ec800b96ead1
 end
